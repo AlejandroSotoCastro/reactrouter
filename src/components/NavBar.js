@@ -4,11 +4,17 @@ import { Link, NavLink } from "react-router-dom";
 export default function NavBar() {
   return (
     <div>
-      <Link to="/">HomePage</Link>
+      <NavLink activeStyle={{ fontWeight: "bold" }} exact to="/">
+        HomePage
+      </NavLink>
       {" - "}
-      <Link to="/about">About this website</Link>
+      <NavLink activeStyle={{ fontWeight: "bold" }} to="/about">
+        About
+      </NavLink>
       {" - "}
-      <Link to="/discover">Discover it</Link>
+      <NavLink activeStyle={{ fontWeight: "bold" }} to="/discover">
+        Discover
+      </NavLink>
     </div>
   );
 }
