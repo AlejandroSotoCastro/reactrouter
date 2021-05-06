@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Movieitem(props) {
   const { Title, Year, Poster, imdbID } = props.movie;
   console.log(Poster);
@@ -7,14 +7,14 @@ export default function Movieitem(props) {
     <div className="MovieItem">
       <img
         src={Poster}
-        alt={Poster}
+        alt={Title}
         style={{
           display: "block",
           maxWidth: "100%",
         }}
       ></img>
 
-      {Title + " " + Year}
+      <Link to={"movie/" + imdbID}>{Title + " " + Year} </Link>
     </div>
   );
 }
