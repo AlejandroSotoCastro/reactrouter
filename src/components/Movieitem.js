@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Movieitem(props) {
   const { Title, Year, Poster, imdbID } = props.movie;
-  console.log(Poster);
+
   return (
     <div className="MovieItem">
       <img
@@ -14,7 +14,7 @@ export default function Movieitem(props) {
         }}
       ></img>
 
-      <Link to={"movie/" + imdbID}>{Title + " " + Year} </Link>
+      <Link to={"/movie/" + imdbID}>{Title + " " + Year} </Link>
     </div>
   );
 }
